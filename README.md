@@ -41,3 +41,15 @@ composer install
 npm install
 npm run build
 ```
+
+## switch tailwind css to bootstrap css
+```
+// resources/js/app.tsx (commnet this line)
+// import '../css/app.css';
+
+// resources/js/pages/welcome.tsx
+// resources/js/layouts/app-layout.tsx
+// resources/js/layouts/auth-layout.tsx
+import '../../css/app.css';
+```
+

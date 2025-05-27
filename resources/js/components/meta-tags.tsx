@@ -1,6 +1,6 @@
-import { Head } from "@inertiajs/react";
+import { Head } from '@inertiajs/react';
 
-const MetaTags = ({ title, description, keywords, author , imageUrl, url} : any) => {
+const MetaTags = ({ title, description, keywords, author, imageUrl, url }: any) => {
     return (
         <Head>
             <title>{title}</title>
@@ -18,7 +18,7 @@ const MetaTags = ({ title, description, keywords, author , imageUrl, url} : any)
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={imageUrl} />
-
+            
         </Head>
     );
 };
