@@ -38,7 +38,7 @@ class LineWebhookController extends Controller
     private function callGemini(string $prompt): string
     {
         $apiKey = env('GEMINI_API_KEY');
-        $modelName = "";
+        $modelName = "gemini-2.0-flash";
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             // 'x-goog-api-key' => $apiKey,
