@@ -1,5 +1,8 @@
 # Happy Health Happy Heart
 
+## Laravel Version 12
+- testing framework: Pest
+
 ## Credit Bootstrap Theme Free
 https://startbootstrap.com/theme/new-age 
 
@@ -11,13 +14,12 @@ laravel new happy-health
 ### option
 - starter kit: breeze
 - breeze stack: react
-- testing framework: Pest
-- laravel version: 12.x
 
 ## dependencies
 ```
 php artisan install:api
 php artisan ziggy:generate
+composer require linecorp/line-bot-sdk
 ```
 ## after clone
 ```
