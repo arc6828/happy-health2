@@ -25,6 +25,11 @@ class LineWebhookController extends Controller
                 $userText = $event['message']['text'];
                 $replyToken = $event['replyToken'];
 
+                if ($this->isUrl($userText)) {
+                    // ไม่ต้อง process ต่อ
+                    return response('OK URL', 200);
+                }
+
                 $replyText = $this->callGemini($userText); // ฟังก์ชันที่เราสร้างไว้
 
                 // $replyText = "Hello World";
@@ -32,8 +37,14 @@ class LineWebhookController extends Controller
             }
         }
 
-        return response('OK', 200);
+        return response('OK Replied', 200);
     }
+
+    private function isUrl($text): bool
+    {
+        return filter_var($text, FILTER_VALIDATE_URL) !== false;
+    }
+
 
     private function callGemini(string $prompt): string
     {
@@ -44,7 +55,7 @@ class LineWebhookController extends Controller
             // 'x-goog-api-key' => $apiKey,
         ])->post("https://generativelanguage.googleapis.com/v1beta/models/{$modelName}:generateContent?key={$apiKey}", [
             'contents' => [[
-                'parts' => [['text' => $prompt]]
+                'parts' => [['text' => "{$prompt} ไม่เกิน 1 ย่อหน้า"]]
             ]]
         ]);
 
