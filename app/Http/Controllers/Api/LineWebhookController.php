@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\LineChatLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -23,6 +24,7 @@ class LineWebhookController extends Controller
         foreach ($events as $event) {
             if ($event['type'] === 'message' && $event['message']['type'] === 'text') {
                 $userText = $event['message']['text'];
+                $lineUserId = $event['source']['userId'];
                 $replyToken = $event['replyToken'];
 
                 if ($this->isUrl($userText)) {
@@ -31,6 +33,13 @@ class LineWebhookController extends Controller
                 }
 
                 $replyText = $this->callGemini($userText); // ฟังก์ชันที่เราสร้างไว้
+
+                // บันทึกลง DB
+                LineChatLog::create([
+                    'line_user_id' => $lineUserId,
+                    'prompt' => $userText,
+                    'reply' => $replyText,
+                ]);
 
                 // $replyText = "Hello World";
                 $this->reply($replyText, $replyToken);
