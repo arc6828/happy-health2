@@ -11,7 +11,13 @@ Route::get('/user', function (Request $request) {
 
 Route::post('line/webhook', [LineWebhookController::class, 'handle']);
 
-Route::get('chatlogs', function(){
+Route::get('chatlogs', function(Request $request){
+    $user = $request->user();
+    // เช็กว่า login แล้ว และเป็น email ที่กำหนด
+    if (!$user || $user->email !== 'chavalit.kow@gmail.com') {
+        return response()->json(['message' => 'Unauthorized'], 403);
+    }
+
     $chatLogs = LineChatLog::limit(5)->get();
     return response()->json($chatLogs);
-});
+})->middleware('auth:sanctum');
