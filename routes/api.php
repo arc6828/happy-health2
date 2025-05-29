@@ -20,4 +20,4 @@ Route::get('chatlogs', function(Request $request){
 
     $chatLogs = LineChatLog::limit(5)->get();
     return response()->json($chatLogs);
-})->middleware('auth:sanctum');
+})->middleware('auth');
