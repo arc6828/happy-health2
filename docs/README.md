@@ -34,6 +34,12 @@
 
 ---
 
+## 📖 มาตรฐานและกติกางานวิจัย (Research Standards)
+* **[แนวทางการอ้างอิงและจัดทำบรรณานุกรม (Citation & Reference Guidelines)](file:///e:/chavalit/laravel/happy-health2/docs/citation_guidelines.md)**
+  * มาตรฐานการเขียนอ้างอิงในเนื้อหา (In-text Citation) และบรรณานุกรม (References) ท้ายบทด้วยรูปแบบ **APA 6th Edition (Thai Style)** สำหรับควบคุมการเขียนรายงานวิจัยทุกบท
+
+---
+
 ## 🛠️ รายละเอียดเทคโนโลยีในโครงการจริง (Project Stack Summary)
 * **Backend Framework**: Laravel 11.x
 * **Frontend Library**: Inertia.js + React.js + TypeScript
