@@ -126,7 +126,7 @@ export default function MyLayout({ children }: { children: React.ReactNode }) {
                                 โครงการ Happy Health Happy Heart
                             </p>
                             <p className="text-xs text-zinc-500 mt-2 max-w-md">
-                                โครงการวิจัยและพัฒนาเพื่อส่งเสริมการดูแลสุขภาพของบุคลากรในมหาวิทยาลัยและชุมชนลุ่มน้ำพรมโหด อำเภออรัญประเทศ จังหวัดสระแก้ว
+                                โครงการวิจัยและพัฒนา "ระบบให้คำปรึกษากับผู้ควบคุมน้ำหนักร่วมกับเจเนอเรทีฟเอไอ"
                             </p>
                         </div>
                         <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
