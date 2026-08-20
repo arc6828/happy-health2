@@ -12,26 +12,26 @@
 
 รายงานวิจัยนี้แบ่งออกเป็น 5 บทหลัก โดยถูกจัดกลุ่มเป็นบทละโฟลเดอร์เพื่อความสะดวกในการจัดการเอกสาร ดังนี้:
 
-* **[บทที่ 1: บทนำ (Introduction)](file:///e:/chavalit/laravel/happy-health2/docs/chapter1/README.md)**
+* **[บทที่ 1: บทนำ (Introduction)](chapter1/README.md)**
   * ความเป็นมาและประเด็นปัญหาพฤติกรรมสุขภาพและโรคอ้วน
   * วัตถุประสงค์ ขอบเขตงานวิจัย และประโยชน์ที่คาดว่าจะได้รับจากระบบ
 
-* **[บทที่ 2: เอกสารและงานวิจัยที่เกี่ยวข้อง (Literature Review)](file:///e:/chavalit/laravel/happy-health2/docs/chapter2/README.md)**
+* **[บทที่ 2: เอกสารและงานวิจัยที่เกี่ยวข้อง (Literature Review)](chapter2/README.md)**
   * แนวคิดการควบคุมน้ำหนัก ดัชนีมวลกาย และสมดุลพลังงาน (Caloric Deficit)
   * ปัญญาประดิษฐ์เชิงสร้างสรรค์ (Generative AI), LLM และโมเดล Gemini 2.0 Flash
   * LINE Messaging API และผลงานวิจัยแชตบอตสุขภาพในประเทศไทย
 
-* **[บทที่ 3: วิธีการดำเนินงานวิจัย (Methodology)](file:///e:/chavalit/laravel/happy-health2/docs/chapter3/README.md)**
+* **[บทที่ 3: วิธีการดำเนินงานวิจัย (Methodology)](chapter3/README.md)**
   * สถาปัตยกรรมระบบ (System Architecture) และเส้นทางการไหลของข้อมูล
   * รายละเอียดฐานข้อมูลการบันทึกประวัติการคุย (`line_chat_logs`)
   * การสกัดข้อผิดพลาด (isUrl Filter) และการวิศวกรรมพร้อมต์ (Prompt Engineering)
 
-* **[บทที่ 4: ผลการวิจัยและการอภิปรายผล (Results and Discussion)](file:///e:/chavalit/laravel/happy-health2/docs/chapter4/README.md)**
+* **[บทที่ 4: ผลการวิจัยและการอภิปรายผล (Results and Discussion)](chapter4/README.md)**
   * ผลสัมฤทธิ์ของหน้าตาโปรแกรมประยุกต์และฐานข้อมูลหลังบ้าน
   * ตัวอย่างกรณีศึกษาในการทดลองพูดคุยและการสกัดคำตอบของโมเดล AI
   * การอภิปรายเรื่องระยะเวลาการตอบสนอง (Latency) และข้อจำกัดความยาวของย่อหน้า
 
-* **[บทที่ 5: สรุปผลและข้อเสนอแนะ (Conclusion and Recommendations)](file:///e:/chavalit/laravel/happy-health2/docs/chapter5/README.md)**
+* **[บทที่ 5: สรุปผลและข้อเสนอแนะ (Conclusion and Recommendations)](chapter5/README.md)**
   * สรุปผลลัพธ์และความสำเร็จของโครงการพัฒนา
   * ข้อจำกัดของระบบในเชิงรูปแบบข้อความและความน่าเชื่อถือด้านการแพทย์
   * ข้อเสนอแนะการพัฒนาต่อยอด เช่น การส่งภาพถ่ายอาหาร (Multimodal AI) และระบบการเก็บประวัติเจาะจงบุคคล (Personalized Tracking)
@@ -39,9 +39,9 @@
 ---
 
 ## 📖 มาตรฐานและกติกางานวิจัย (Research Guidelines)
-* **[แนวทางการอ้างอิงและจัดทำบรรณานุกรม (Citation & Reference Guidelines)](file:///e:/chavalit/laravel/happy-health2/docs/citation_guidelines.md)**
+* **[แนวทางการอ้างอิงและจัดทำบรรณานุกรม (Citation & Reference Guidelines)](citation_guidelines.md)**
   * มาตรฐานการเขียนอ้างอิงในเนื้อหา (In-text Citation) และบรรณานุกรม (References) ท้ายบทด้วยรูปแบบ **APA 6th Edition (Thai Style)** สำหรับควบคุมการเขียนรายงานวิจัยทุกบท
-* **[รายการฟีเจอร์ที่ต้องพัฒนาเพิ่มเติม (Technical & Feature Backlog)](file:///e:/chavalit/laravel/happy-health2/docs/todo_features.md)**
+* **[รายการฟีเจอร์ที่ต้องพัฒนาเพิ่มเติม (Technical & Feature Backlog)](todo_features.md)**
   * แผนงานและสเปกฟีเจอร์เชิงลึกในระบบหลังบ้านและแผงควบคุมแอดมินที่ต้องพัฒนาเพิ่มเติมเพื่อรองรับการทำงานในอนาคต
 
 ---
