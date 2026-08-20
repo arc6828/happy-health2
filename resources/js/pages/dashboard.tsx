@@ -51,7 +51,7 @@ export default function Dashboard() {
     // AI Settings state
     const [systemPrompt, setSystemPrompt] = useState('');
     const [suffixPrompt, setSuffixPrompt] = useState('');
-    const [modelName, setModelName] = useState('gemini-2.0-flash');
+    const [modelName, setModelName] = useState('gemini-3.6-flash');
     const [settingsLoading, setSettingsLoading] = useState(true);
     const [settingsSaving, setSettingsSaving] = useState(false);
     const [toastMessage, setToastMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
@@ -85,7 +85,7 @@ export default function Dashboard() {
                 const result = await response.json();
                 setSystemPrompt(result.system_prompt || '');
                 setSuffixPrompt(result.suffix_prompt || '');
-                setModelName(result.model_name || 'gemini-2.0-flash');
+                setModelName(result.model_name || 'gemini-3.6-flash');
             }
         } catch (error) {
             console.error('Error fetching AI settings:', error);
@@ -360,8 +360,8 @@ export default function Dashboard() {
                                         onChange={(e) => setModelName(e.target.value)}
                                         className="w-full max-w-xs px-3.5 py-2 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 rounded-xl text-sm focus:outline-hidden focus:ring-1 focus:ring-emerald-500/50"
                                     >
-                                        <option value="gemini-2.0-flash">Gemini 2.0 Flash (แนะนำ - ประมวลผลเร็ว)</option>
-                                        <option value="gemini-2.0-pro">Gemini 2.0 Pro (ประมวลผลลึกซึ้ง)</option>
+                                        <option value="gemini-3.6-flash">Gemini 3.6 Flash (แนะนำ - ประมวลผลเร็วรุ่นล่าสุด)</option>
+                                        <option value="gemini-1.5-flash">Gemini 1.5 Flash (เสถียร)</option>
                                     </select>
                                     <p className="text-xs text-zinc-400">เลือกรุ่นแบบจำลองของ Google Gemini API ที่เหมาะกับโครงการ</p>
                                 </div>

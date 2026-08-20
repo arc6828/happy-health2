@@ -123,7 +123,7 @@ class LineWebhookController extends Controller
         // ค่าเริ่มต้นกรณีไม่มีไฟล์ตั้งค่า
         $systemPrompt = "คุณคือผู้ช่วยแนะนำด้านโภชนาการและการดูแลสุขภาพเพื่อลดน้ำหนักอย่างถูกต้องและปลอดภัย";
         $suffixPrompt = "ไม่เกิน 1 ย่อหน้า";
-        $modelName = "gemini-2.0-flash";
+        $modelName = env('GEMINI_MODEL', 'gemini-3.6-flash');
 
         // ดึงการตั้งค่าจากไฟล์ JSON
         $settingsPath = storage_path('app/ai_settings.json');
@@ -151,7 +151,7 @@ class LineWebhookController extends Controller
     private function callGeminiImage(string $base64Data, string $mimeType): string
     {
         $apiKey = env('GEMINI_API_KEY');
-        $modelName = "gemini-2.0-flash";
+        $modelName = env('GEMINI_MODEL', 'gemini-3.6-flash');
 
         // ค่าตั้งค่ากรณีไม่มีไฟล์
         $systemPrompt = "คุณคือผู้ช่วยแนะนำด้านโภชนาการและการดูแลสุขภาพเพื่อลดน้ำหนักอย่างถูกต้องและปลอดภัย โปรดวิเคราะห์รูปภาพอาหารนี้ บอกชื่ออาหาร แคลอรี่ และส่วนประกอบหลักของสารอาหาร (คาร์โบไฮเดรต โปรตีน ไขมัน) และคำแนะนำสุขภาพสั้นๆ";

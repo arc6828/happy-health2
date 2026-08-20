@@ -204,7 +204,7 @@ export default function Home() {
                                 โต้ตอบคำปรึกษาอัจฉริยะ (AI Advice)
                             </h3>
                             <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
-                                วิเคราะห์ประโยคธรรมชาติและคำนวณแคลอรีอาหารไทยได้อย่างถูกต้อง ผ่าน Google Gemini 2.0 Flash ตอบรวดเร็วไม่เยิ่นเย้อภายใน 1 ย่อหน้า
+                                วิเคราะห์ประโยคธรรมชาติและคำนวณแคลอรีอาหารไทยได้อย่างถูกต้อง ผ่าน Google Gemini AI ตอบรวดเร็วไม่เยิ่นเย้อภายใน 1 ย่อหน้า
                             </p>
                         </div>
 

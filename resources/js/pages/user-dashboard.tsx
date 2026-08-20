@@ -20,7 +20,8 @@ import {
     HelpCircle,
     X,
     ChevronDown,
-    ChevronUp
+    ChevronUp,
+    Sparkles
 } from 'lucide-react';
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -87,6 +88,10 @@ export default function UserDashboard() {
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [leaderboardLoading, setLeaderboardLoading] = useState(false);
 
+    // Medium blog articles states
+    const [mediumArticles, setMediumArticles] = useState<any[]>([]);
+    const [mediumLoading, setMediumLoading] = useState(false);
+
     // Selected article for reader modal
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
@@ -148,6 +153,22 @@ export default function UserDashboard() {
         }
     };
 
+    // Fetch Medium Articles
+    const fetchMediumArticles = async () => {
+        setMediumLoading(true);
+        try {
+            const response = await fetch('/api/medium-articles');
+            if (response.ok) {
+                const result = await response.json();
+                setMediumArticles(result || []);
+            }
+        } catch (error) {
+            console.error('Error fetching Medium articles:', error);
+        } finally {
+            setMediumLoading(false);
+        }
+    };
+
     useEffect(() => {
         fetchUserData();
     }, []);
@@ -155,6 +176,8 @@ export default function UserDashboard() {
     useEffect(() => {
         if (activeTab === 'leaderboard') {
             fetchLeaderboard();
+        } else if (activeTab === 'media') {
+            fetchMediumArticles();
         }
     }, [activeTab]);
 
@@ -833,39 +856,66 @@ export default function UserDashboard() {
                                 คลังสื่อสุขภาพและโภชนาการดิจิทัล (Educational Media Hub)
                             </h2>
                             <p className="text-xs text-zinc-400 mt-1">
-                                รวบรวมองค์ความรู้ งานวิจัย และคำแนะนำการจำกัดแคลอรี่ที่อิงตามหลักวิทยาศาสตร์เพื่อความยั่งยืน
+                                ติดตามข้อมูลสาระความรู้ บทความโภชนาการ และงานวิจัยโภชนศึกษาได้โดยตรงผ่านบล็อกทางการของโครงการ
                             </p>
                         </div>
 
                         {/* Article Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            {articles.map((art) => (
-                                <div 
-                                    key={art.id} 
-                                    onClick={() => setSelectedArticle(art)}
-                                    className="bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800/80 rounded-2xl p-6 shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
-                                >
-                                    <div className="space-y-3">
-                                        <div className="flex justify-between items-center text-xs">
-                                            <span className="bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 px-2.5 py-0.5 rounded-full font-bold">
-                                                {art.tag}
-                                            </span>
-                                            <span className="text-zinc-400">{art.readTime}</span>
-                                        </div>
-                                        <h3 className="font-extrabold text-sm sm:text-base text-zinc-900 dark:text-zinc-50">
-                                            {art.title}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-2">
-                                            {art.description}
-                                        </p>
-                                    </div>
-                                    <div className="pt-4 flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400 font-extrabold">
-                                        คลิกเปิดอ่านฉบับเต็ม
-                                        <ChevronRight className="h-3.5 w-3.5" />
-                                    </div>
+                        {mediumLoading ? (
+                            <div className="text-center py-12 text-zinc-400 text-sm">
+                                <div className="flex items-center justify-center gap-2">
+                                    <Loader2 className="h-5 w-5 animate-spin text-emerald-500" />
+                                    กำลังดึงข้อมูลบทความวิชาการจาก Medium...
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ) : mediumArticles.length === 0 ? (
+                            <div className="text-center py-12 text-zinc-400 text-sm">
+                                ไม่พบข้อมูลบทความจาก Medium ในขณะนี้ หรือเกิดข้อผิดพลาดในการดึงข้อมูล
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {mediumArticles.map((art, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        onClick={() => window.open(art.link, '_blank')}
+                                        className="bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800/80 rounded-2xl overflow-hidden shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div className="h-44 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-850 relative">
+                                                <img 
+                                                    src={art.thumbnail} 
+                                                    alt={art.title} 
+                                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                                    onError={(e) => {
+                                                        e.currentTarget.src = 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600';
+                                                    }}
+                                                />
+                                            </div>
+                                            <div className="p-5 space-y-2">
+                                                <div className="flex justify-between items-center text-[10px] sm:text-xs">
+                                                    <span className="bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 px-2.5 py-0.5 rounded-full font-bold">
+                                                        บทความ Medium
+                                                    </span>
+                                                    <span className="text-zinc-400 dark:text-zinc-500 font-medium">
+                                                        {art.published_at} • โดย {art.author}
+                                                    </span>
+                                                </div>
+                                                <h3 className="font-extrabold text-sm sm:text-base text-zinc-900 dark:text-zinc-50 line-clamp-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                                                    {art.title}
+                                                </h3>
+                                                <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-2">
+                                                    {art.snippet}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="px-5 pb-5 pt-1 flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400 font-extrabold">
+                                            อ่านบทความตัวเต็มบน Medium
+                                            <ChevronRight className="h-3.5 w-3.5" />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
 

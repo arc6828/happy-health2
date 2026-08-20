@@ -47,8 +47,8 @@
 ---
 
 ## 🛠️ รายละเอียดเทคโนโลยีในโครงการจริง (Project Stack Summary)
-* **Backend Framework**: Laravel 11.x
+* **Backend Framework**: Laravel 12.x
 * **Frontend Library**: Inertia.js + React.js + TypeScript
 * **Database**: SQLite หรือ MySQL
-* **Integrations**: LINE Messaging API SDK & Google Gemini API (`gemini-2.0-flash`)
+* **Integrations**: LINE Messaging API SDK & Google Gemini API (`gemini-3.6-flash`)
 
