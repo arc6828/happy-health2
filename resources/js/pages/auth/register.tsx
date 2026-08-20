@@ -32,12 +32,12 @@ export default function Register() {
     };
 
     return (
-        <AuthLayout title="Create an account" description="Enter your details below to create your account">
-            <Head title="Register" />
+        <AuthLayout title="สมัครสมาชิกใหม่" description="กรอกข้อมูลของคุณด้านล่างเพื่อสร้างบัญชีผู้ใช้งาน">
+            <Head title="สมัครสมาชิก" />
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="name">Name</Label>
+                        <Label htmlFor="name" className="text-zinc-700 dark:text-zinc-300 font-semibold">ชื่อ-นามสกุล</Label>
                         <Input
                             id="name"
                             type="text"
@@ -48,13 +48,14 @@ export default function Register() {
                             value={data.name}
                             onChange={(e) => setData('name', e.target.value)}
                             disabled={processing}
-                            placeholder="Full name"
+                            placeholder="กรอกชื่อจริงและนามสกุล"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.name} className="mt-2" />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="email">Email address</Label>
+                        <Label htmlFor="email" className="text-zinc-700 dark:text-zinc-300 font-semibold">ที่อยู่อีเมล</Label>
                         <Input
                             id="email"
                             type="email"
@@ -65,12 +66,13 @@ export default function Register() {
                             onChange={(e) => setData('email', e.target.value)}
                             disabled={processing}
                             placeholder="email@example.com"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.email} />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password" className="text-zinc-700 dark:text-zinc-300 font-semibold">รหัสผ่าน</Label>
                         <Input
                             id="password"
                             type="password"
@@ -80,13 +82,14 @@ export default function Register() {
                             value={data.password}
                             onChange={(e) => setData('password', e.target.value)}
                             disabled={processing}
-                            placeholder="Password"
+                            placeholder="กำหนดรหัสผ่านใหม่"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.password} />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password_confirmation">Confirm password</Label>
+                        <Label htmlFor="password_confirmation" className="text-zinc-700 dark:text-zinc-300 font-semibold">ยืนยันรหัสผ่าน</Label>
                         <Input
                             id="password_confirmation"
                             type="password"
@@ -96,21 +99,22 @@ export default function Register() {
                             value={data.password_confirmation}
                             onChange={(e) => setData('password_confirmation', e.target.value)}
                             disabled={processing}
-                            placeholder="Confirm password"
+                            placeholder="ป้อนรหัสผ่านอีกครั้ง"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.password_confirmation} />
                     </div>
 
-                    <Button type="submit" className="mt-2 w-full" tabIndex={5} disabled={processing}>
-                        {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                        Create account
+                    <Button type="submit" className="mt-2 w-full bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white rounded-full py-2.5 font-bold shadow-md transition-all duration-150 active:scale-98 cursor-pointer" tabIndex={5} disabled={processing}>
+                        {processing && <LoaderCircle className="h-4 w-4 animate-spin mr-2" />}
+                        สร้างบัญชีผู้ใช้
                     </Button>
                 </div>
 
-                <div className="text-muted-foreground text-center text-sm">
-                    Already have an account?{' '}
-                    <TextLink href={route('login')} tabIndex={6}>
-                        Log in
+                <div className="text-zinc-500 dark:text-zinc-400 text-center text-sm">
+                    มีบัญชีผู้ใช้อยู่แล้ว?{' '}
+                    <TextLink href={route('login')} className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline" tabIndex={6}>
+                        เข้าสู่ระบบที่นี่
                     </TextLink>
                 </div>
             </form>

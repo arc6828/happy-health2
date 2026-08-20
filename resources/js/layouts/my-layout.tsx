@@ -49,7 +49,7 @@ export default function MyLayout({ children }: { children: React.ReactNode }) {
                                     className="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 bg-white hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-800/80 px-4 py-2 rounded-full text-sm font-semibold shadow-xs transition-all duration-150"
                                 >
                                     <LogIn className="h-4 w-4" />
-                                    สำหรับผู้ดูแลระบบ
+                                    เข้าสู่ระบบ / สมัครสมาชิก
                                 </Link>
                             )}
                         </div>
@@ -105,7 +105,7 @@ export default function MyLayout({ children }: { children: React.ReactNode }) {
                                     className="w-full flex items-center justify-center gap-2 border border-zinc-300 dark:border-zinc-700 bg-white hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-800 py-3 rounded-full text-base font-semibold transition-all duration-150"
                                 >
                                     <LogIn className="h-5 w-5" />
-                                    สำหรับผู้ดูแลระบบ
+                                    เข้าสู่ระบบ / สมัครสมาชิก
                                 </Link>
                             )}
                         </div>
@@ -133,7 +133,7 @@ export default function MyLayout({ children }: { children: React.ReactNode }) {
                             <a href="#features" className="hover:text-white transition-colors">ฟีเจอร์หลัก</a>
                             <a href="#stats" className="hover:text-white transition-colors">ผลการวิจัย</a>
                             <a href="#download" className="hover:text-white transition-colors">LINE OA</a>
-                            <Link href={route('login')} className="hover:text-white transition-colors">Admin Login</Link>
+                            <Link href={route('login')} className="hover:text-white transition-colors">เข้าสู่ระบบ</Link>
                         </div>
                     </div>
                     <div className="mt-8 pt-8 border-t border-zinc-800 text-center text-xs text-zinc-600 flex flex-col sm:flex-row items-center justify-between gap-4">

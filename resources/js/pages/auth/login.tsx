@@ -36,13 +36,13 @@ export default function Login({ status, canResetPassword }: LoginProps) {
     };
 
     return (
-        <AuthLayout title="Log in to your account" description="Enter your email and password below to log in">
-            <Head title="Log in" />
+        <AuthLayout title="เข้าสู่ระบบบัญชีของคุณ" description="กรอกอีเมลและรหัสผ่านเพื่อเข้าสู่ระบบ">
+            <Head title="เข้าสู่ระบบ" />
 
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="email">Email address</Label>
+                        <Label htmlFor="email" className="text-zinc-700 dark:text-zinc-300 font-semibold">ที่อยู่อีเมล</Label>
                         <Input
                             id="email"
                             type="email"
@@ -53,16 +53,17 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                             value={data.email}
                             onChange={(e) => setData('email', e.target.value)}
                             placeholder="email@example.com"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.email} />
                     </div>
 
                     <div className="grid gap-2">
                         <div className="flex items-center">
-                            <Label htmlFor="password">Password</Label>
+                            <Label htmlFor="password" className="text-zinc-700 dark:text-zinc-300 font-semibold">รหัสผ่าน</Label>
                             {canResetPassword && (
-                                <TextLink href={route('password.request')} className="ml-auto text-sm" tabIndex={5}>
-                                    Forgot password?
+                                <TextLink href={route('password.request')} className="ml-auto text-sm text-emerald-600 dark:text-emerald-400 font-semibold hover:underline" tabIndex={5}>
+                                    ลืมรหัสผ่าน?
                                 </TextLink>
                             )}
                         </div>
@@ -74,7 +75,8 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                             autoComplete="current-password"
                             value={data.password}
                             onChange={(e) => setData('password', e.target.value)}
-                            placeholder="Password"
+                            placeholder="รหัสผ่านของคุณ"
+                            className="focus-visible:ring-emerald-500 focus-visible:border-emerald-500 rounded-xl bg-white/50 dark:bg-zinc-950/50"
                         />
                         <InputError message={errors.password} />
                     </div>
@@ -86,20 +88,21 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                             checked={data.remember}
                             onClick={() => setData('remember', !data.remember)}
                             tabIndex={3}
+                            className="border-zinc-300 data-[state=checked]:bg-emerald-600 data-[state=checked]:border-emerald-600"
                         />
-                        <Label htmlFor="remember">Remember me</Label>
+                        <Label htmlFor="remember" className="text-zinc-600 dark:text-zinc-400 font-medium">จดจำฉันในระบบ</Label>
                     </div>
 
-                    <Button type="submit" className="mt-4 w-full" tabIndex={4} disabled={processing}>
-                        {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                        Log in
+                    <Button type="submit" className="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white rounded-full py-2.5 font-bold shadow-md transition-all duration-150 active:scale-98 cursor-pointer" tabIndex={4} disabled={processing}>
+                        {processing && <LoaderCircle className="h-4 w-4 animate-spin mr-2" />}
+                        เข้าสู่ระบบ
                     </Button>
                 </div>
 
-                <div className="text-muted-foreground text-center text-sm">
-                    Don't have an account?{' '}
-                    <TextLink href={route('register')} tabIndex={5}>
-                        Sign up
+                <div className="text-zinc-500 dark:text-zinc-400 text-center text-sm">
+                    ยังไม่มีบัญชีผู้ใช้?{' '}
+                    <TextLink href={route('register')} className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline" tabIndex={5}>
+                        สมัครสมาชิกใหม่ที่นี่
                     </TextLink>
                 </div>
             </form>
