@@ -13,7 +13,11 @@ Route::get('/welcome', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
+        $user = auth()->user();
+        if ($user && $user->email === 'chavalit.kow@gmail.com') {
+            return Inertia::render('dashboard');
+        }
+        return Inertia::render('user-dashboard');
     })->name('dashboard');
 });
 

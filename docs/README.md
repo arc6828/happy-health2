@@ -1,5 +1,9 @@
 # รายงานวิจัย: ระบบให้คำปรึกษากับผู้ควบคุมน้ำหนักร่วมกับเจเนอเรทีฟเอไอ
 
+**เว็บไซต์อย่างเป็นทางการของโครงการ**: [https://happyhealthhappyheart.com](https://happyhealthhappyheart.com)
+
+---
+
 รายงานวิจัยฉบับนี้ศึกษาและนำเสนอการออกแบบและพัฒนา **ระบบช่วยคัดกรอง ให้คำปรึกษา และแนะนำข้อมูลการควบคุมน้ำหนัก** โดยใช้เทคโนโลยี Generative AI (Google Gemini 2.0 Flash) บูรณาการเข้ากับระบบแชตบอตบนแพลตฟอร์ม LINE เชื่อมต่อกับระบบหลังบ้านจัดการข้อมูล Laravel
 
 ---
@@ -34,14 +38,17 @@
 
 ---
 
-## 📖 มาตรฐานและกติกางานวิจัย (Research Standards)
+## 📖 มาตรฐานและกติกางานวิจัย (Research Guidelines)
 * **[แนวทางการอ้างอิงและจัดทำบรรณานุกรม (Citation & Reference Guidelines)](file:///e:/chavalit/laravel/happy-health2/docs/citation_guidelines.md)**
   * มาตรฐานการเขียนอ้างอิงในเนื้อหา (In-text Citation) และบรรณานุกรม (References) ท้ายบทด้วยรูปแบบ **APA 6th Edition (Thai Style)** สำหรับควบคุมการเขียนรายงานวิจัยทุกบท
+* **[รายการฟีเจอร์ที่ต้องพัฒนาเพิ่มเติม (Technical & Feature Backlog)](file:///e:/chavalit/laravel/happy-health2/docs/todo_features.md)**
+  * แผนงานและสเปกฟีเจอร์เชิงลึกในระบบหลังบ้านและแผงควบคุมแอดมินที่ต้องพัฒนาเพิ่มเติมเพื่อรองรับการทำงานในอนาคต
 
 ---
 
 ## 🛠️ รายละเอียดเทคโนโลยีในโครงการจริง (Project Stack Summary)
 * **Backend Framework**: Laravel 11.x
 * **Frontend Library**: Inertia.js + React.js + TypeScript
-* **Database**: MySQL Server
+* **Database**: SQLite หรือ MySQL
 * **Integrations**: LINE Messaging API SDK & Google Gemini API (`gemini-2.0-flash`)
+

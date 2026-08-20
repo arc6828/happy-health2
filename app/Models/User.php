@@ -22,6 +22,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'height',
+        'age',
+        'gender',
+        'activity_level',
+        'line_user_id',
     ];
 
     /**
@@ -45,5 +50,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function healthLogs()
+    {
+        return $this->hasMany(UserHealthLog::class);
     }
 }
