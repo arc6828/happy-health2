@@ -13,6 +13,8 @@
 
 ### 4.4.1 หน้าแรกแพลตฟอร์มและการประชาสัมพันธ์โครงการ (Home Landing Page)
 
+เว็บไซต์อย่างเป็นทางการของโครงการที่ URL **[https://happyhealthhappyheart.com](https://happyhealthhappyheart.com)** ได้จัดทำหน้าแรกเพื่อนำเสนอข้อมูลเป้าหมายโครงการ ผลสัมฤทธิ์การวิจัย และช่องทางแสกน QR Code เพื่อเชื่อมต่อ LINE OA
+
 ![ภาพแสดงหน้าแรกของเว็บไซต์โครงการ Happy Health Happy Heart](../images/manual_home_page.png)
 
 ### 4.4.2 ระบบช่วยเหลือและตอบคำถามพบบ่อย (Helpdesk & FAQ)
