@@ -6,10 +6,13 @@
 
 ## 1. รายละเอียดเอกสารบทความวิจัย
 
-1) **[บทความวิจัยฉบับเต็มสำหรับตีพิมพ์ Scopus (Full Research Paper)](paper.md)**  
-   เอกสารฉบับสมบูรณ์ความยาว 6 ส่วนหลัก เน้นสถาปัตยกรรมระบบสารสนเทศ (System Architecture), สถาปัตยกรรม Multimodal Generative AI (`gemini-3.6-flash`), ท่อประมวลผล Dynamic Personalized Context Injection Protocol, ระบบความปลอดภัยสกัดกั้นภัยคุกคาม Automated Threat Mitigation Guardrail (`isUrl`) และการคำนวณ Response Latency พร้อมรายการเอกสารอ้างอิงมาตรฐาน APA 6th Edition
+1) **[บทความวิจัยฉบับเต็ม ภาษาไทย (Full Research Paper - Thai Version)](paper_th.md)**  
+   เอกสารบทความวิจัยฉบับเต็มภาษาไทย เรียบเรียงตามรูปแบบวิชาการ ครอบคลุมสถาปัตยกรรมระบบสารสนเทศ, Multimodal Generative AI (`gemini-3.6-flash`), Dynamic Personalized Context Injection Protocol, Automated Threat Mitigation Guardrails (`isUrl` Filter), Technical Latency, และผลการวิเคราะห์สถิติทางสรีรวิทยา
 
-2) **[สรุปบทความวิจัยที่เคยตีพิมพ์แล้วในวารสารสุขศึกษา (Prior Publication Summary)](prior_published_paper_summary.md)**  
+2) **[บทความวิจัยฉบับเต็ม ภาษาอังกฤษ สำหรับเสนอขอตีพิมพ์ SJST / Scopus (Full Research Paper - English Version)](paper_en.md)**  
+   เอกสารบทความวิจัยฉบับเต็มภาษาอังกฤษ จัดรูปแบบและโครงสร้างตามข้อกำหนด **Guide for Author** ของวารสาร Suranaree Journal of Science and Technology (SJST) เช่น Title (Capitalized, < 15 words), Running Head (< 60 chars), Abstract (< 250 words), Author ORCID, และ APA 7th Edition Reference formatting
+
+3) **[สรุปบทความวิจัยที่เคยตีพิมพ์แล้วในวารสารสุขศึกษา (Prior Publication Summary)](prior_published_paper_summary.md)**  
    เอกสารสรุปผลการวิจัยและข้อมูลบรรณานุกรมของบทความวิจัยที่ได้รับการตีพิมพ์แล้วใน *วารสารสุขศึกษา (TCI Tier 1)* เพื่อใช้สำหรับการอ้างอิง สรรหาความเชื่อมโยง และป้องกันปัญหาการตีพิมพ์ซ้ำ (Self-Plagiarism)
 
 ---
@@ -35,6 +38,7 @@
 1) **Suranaree Journal of Science and Technology (SJST)**  
    **หน่วยงานจัดทำ**: มหาวิทยาลัยเทคโนโลยีสุรนารี (Suranaree University of Technology - SUT)  
    **การจัดอันดับในฐานข้อมูล**: Scopus (Q4), TCI Tier 1, ACI  
+   **เอกสารคู่มือเตรียมบทความ**: [คู่มือและข้อกำหนดการเตรียมบทความวิจัย SJST (Guide for Author)](sjst_author_guide.md)  
    **ขอบเขตเนื้อหาและเหตุผลที่เลือก**: วารสารเปิดรับงานวิจัยประยุกต์ด้านเทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์ และนวัตกรรมสุขภาพ (Health Informatics) เหมาะสมกับบทความที่มีทั้งการออกแบบสถาปัตยกรรมระบบ (System Architecture) และการวัดผลสัมฤทธิ์ทางการแพทย์เชิงสถิติ
 
 ---
