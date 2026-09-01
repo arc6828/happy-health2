@@ -36,10 +36,10 @@
 ## 4. แนวทางการนำไปใช้อ้างอิงใน Paper ฉบับใหม่ (Citation Guidance for New Scopus Paper)
 
 1) **การอ้างอิงในเนื้อหา (In-text Citation Format)**:
-   * **ภาษาไทย**: (ชวลิต โควสุวรรณ และคณะ, 2567)
-   * **ภาษาอังกฤษ**: (Kowsuwan et al., 2024)
+   * **ภาษาไทย**: (ชวลิต โควีระวงศ์ และคณะ, 2567)
+   * **ภาษาอังกฤษ**: (Koweerawong et al., 2024)
 2) **ข้อความมาตรฐานสำหรับอ้างอิงความเชื่อมโยง**:
-   * "The preliminary health intervention protocol and clinical physiological findings ($n=38$) were established in Kowsuwan et al. (2024). Building upon these health outcome foundations, this paper focuses on the technical architecture, LLM prompt engineering, and performance optimization of the underlying Generative AI system."
+   * "The preliminary health intervention protocol and clinical physiological findings ($n=38$) were established in Koweerawong et al. (2024). Building upon these health outcome foundations, this paper focuses on the technical architecture, LLM prompt engineering, and performance optimization of the underlying Generative AI system."
 3) **การจำแนกความแตกต่างเชิงผลงาน (Novelty Separation)**:
    * **บทความเดิม (HEJ Paper)**: ตอบคำถามเชิงสุขศึกษา สรีรวิทยา และพฤติกรรมมนุษย์
    * **บทความใหม่ (Scopus/SJST Paper)**: ตอบคำถามเชิงวิทยาการคอมพิวเตอร์ สถาปัตยกรรมซอฟต์แวร์ API Latency และระบบความปลอดภัยปัญญาประดิษฐ์

@@ -5,14 +5,16 @@
 **Running Head**: PERSONALIZED WEIGHT MANAGEMENT PLATFORM USING GENERATIVE AI
 
 [Format Guide: Author Names | Font: Times New Roman 14 pt Bold | Alignment: Centered]
-**Authors**: Chavalit Kowsuwan<sup>1,*</sup>, Pantip Chaisiri<sup>1</sup>, and Natchuda Siriroj<sup>1</sup>  
+**Authors**: Chavalit Koweerawong<sup>1,*</sup>, Pranomkorn Ampornphan<sup>1</sup>, Wichuda Sriwongklang<sup>2</sup>, Sirada Boonsit<sup>2</sup>, and Yaiprae Chatree<sup>3</sup>  
 
 [Format Guide: Affiliations & Footnote | Font: Times New Roman 9 pt Italic | Alignment: Centered / Footnote]
-<sup>1</sup> Department of Physical Education, Faculty of Education, Kasetsart University, Bangkok 10900, Thailand  
+<sup>1</sup> Department of Computer Science, Faculty of Science and Technology, Valaya Alongkorn Rajabhat University under Royal Patronage, Pathum Thani 13180, Thailand  
+<sup>2</sup> Faculty of Public Health, Valaya Alongkorn Rajabhat University under Royal Patronage, Pathum Thani 13180, Thailand  
+<sup>3</sup> Department of Nutrition and Dietetics, Faculty of Science and Technology, Valaya Alongkorn Rajabhat University under Royal Patronage, Pathum Thani 13180, Thailand  
 
 [Format Guide: Corresponding Author Details | Font: Times New Roman 9 pt Italic | Alignment: Left / Footnote]
-<sup>*</sup> **Corresponding Author**: Chavalit Kowsuwan, Department of Physical Education, Faculty of Education, Kasetsart University, 50 Ngamwongwan Road, Chatuchak, Bangkok 10900, Thailand. E-mail: `g_chavalit.k@ku.th`, ORCID iD: `https://orcid.org/0009-0000-0000-0000`  
-**Author ORCID iDs**: Pantip Chaisiri (`https://orcid.org/0009-0000-0000-0001`), Natchuda Siriroj (`https://orcid.org/0009-0000-0000-0002`)  
+<sup>*</sup> **Corresponding Author**: Chavalit Koweerawong, Department of Computer Science, Faculty of Science and Technology, Valaya Alongkorn Rajabhat University under Royal Patronage, Pathum Thani 13180, Thailand. E-mail: `chavalit.kow@gmail.com`, ORCID iD: `https://orcid.org/0009-0000-0000-0000`  
+**Author ORCID iDs**: Pranomkorn Ampornphan (`https://orcid.org/0009-0000-0000-0001`), Wichuda Sriwongklang (`https://orcid.org/0009-0000-0000-0002`), Sirada Boonsit (`https://orcid.org/0009-0000-0000-0003`), Yaiprae Chatree (`https://orcid.org/0009-0000-0000-0004`)  
 **Official Project URL**: [https://happyhealthhappyheart.com](https://happyhealthhappyheart.com)  
 
 ---
@@ -21,7 +23,7 @@
 ## Abstract
 
 [Format Guide: Abstract Body | Font: Times New Roman 10 pt Regular | Alignment: Flush Left | Single Paragraph | Limit: Max 250 words]
-This paper presents the system architecture design, implementation, and performance evaluation of a personalized digital health advisory platform powered by a Multimodal Generative AI framework. The system integrates Google Gemini 2.0 Flash (`gemini-3.6-flash`) with a Hybrid Asynchronous Event-Driven Webhook Architecture built on Laravel 12 and the LINE Messaging API messaging infrastructure. The core technical novelty resides in a four-fold processing pipeline: 1) a Dynamic Personalized Context Injection Protocol that computes user-specific BMR and TDEE metrics to dynamically enrich the LLM context window; 2) a Multimodal Computer Vision Caloric Density Estimation engine for automated nutritional assessment from dish images; 3) automated security guardrails featuring input sanitization and threat mitigation (`isUrl` filtering); and 4) token-efficient single-paragraph output framing tailored for mobile viewports. Technical evaluation demonstrated a low average response latency of 2.4 seconds, 99.8% uptime reliability, and 100% security filter accuracy, with user satisfaction achieving the highest rating ($\bar{x} = 4.59$, S.D. = 0.49). Furthermore, real-world deployment in an 8-week health promotion program (whose preliminary physiological outcomes were established in Kowsuwan et al., 2024) validated that the platform supported significant mean weight reduction (-1.69 kg, $p < .001$) and body fat decrease (-1.36%, $p < .001$). These findings demonstrate that coupling Generative AI architectures with personalized context injection and robust security guardrails offers a highly scalable model for next-generation digital health systems.
+This paper presents the system architecture design, implementation, and performance evaluation of a personalized digital health advisory platform powered by a Multimodal Generative AI framework. The system integrates Google Gemini 2.0 Flash (`gemini-3.6-flash`) with a Hybrid Asynchronous Event-Driven Webhook Architecture built on Laravel 12 and the LINE Messaging API messaging infrastructure. The core technical novelty resides in a four-fold processing pipeline: 1) a Dynamic Personalized Context Injection Protocol that computes user-specific BMR and TDEE metrics to dynamically enrich the LLM context window; 2) a Multimodal Computer Vision Caloric Density Estimation engine for automated nutritional assessment from dish images; 3) automated security guardrails featuring input sanitization and threat mitigation (`isUrl` filtering); and 4) token-efficient single-paragraph output framing tailored for mobile viewports. Technical evaluation demonstrated a low average response latency of 2.4 seconds, 99.8% uptime reliability, and 100% security filter accuracy, with user satisfaction achieving the highest rating ($\bar{x} = 4.59$, S.D. = 0.49). Furthermore, real-world deployment in an 8-week health promotion program (whose preliminary physiological outcomes were established in Koweerawong et al., 2024) validated that the platform supported significant mean weight reduction (-1.69 kg, $p < .001$) and body fat decrease (-1.36%, $p < .001$). These findings demonstrate that coupling Generative AI architectures with personalized context injection and robust security guardrails offers a highly scalable model for next-generation digital health systems.
 
 [Format Guide: Keywords | Title Font: Times New Roman 10 pt Bold | Text Font: Times New Roman 10 pt Regular | 4-6 Keywords Separated by Commas]
 **Keywords**: Generative AI architecture, Google Gemini 2.0 Flash, Personalized context injection, Digital health environment, LINE Messaging API
@@ -79,7 +81,7 @@ Google Gemini 2.0 Flash represents a modern class of high-throughput MLLMs capab
 ### 2.3 Prior Work and Novel Contribution
 
 [Format Guide: Paragraph | Font: Times New Roman 10 pt Regular | Indent: 1 tab (0.5 in)]
-Prior research by Kowsuwan et al. (2024) reported the physiological and behavioral health outcomes of a university health promotion intervention. The present study introduces distinct novel contributions focused on software architecture innovation. Specifically, this paper details the engineering of the Dynamic Context Injection Protocol, the design of input sanitization guardrails, and the empirical measurement of system response latency—technical dimensions that were not within the scope of prior publication.
+Prior research by Koweerawong et al. (2024) reported the physiological and behavioral health outcomes of a university health promotion intervention. The present study introduces distinct novel contributions focused on software architecture innovation. Specifically, this paper details the engineering of the Dynamic Context Injection Protocol, the design of input sanitization guardrails, and the empirical measurement of system response latency—technical dimensions that were not within the scope of prior publication.
 
 ---
 
@@ -180,7 +182,7 @@ Evaluation surveys administered to platform participants indicated high user sat
 ### 4.3 Clinical Case Study Efficacy Validation
 
 [Format Guide: Paragraph | Font: Times New Roman 10 pt Regular | Indent: 1 tab (0.5 in)]
-To validate that the system architecture delivered practical health benefits, data from an 8-week field intervention ($n = 38$, preliminary physiological data reported in Kowsuwan et al., 2024) were analyzed. As summarized in Table 1, participants experienced statistically significant improvements across key physiological markers.
+To validate that the system architecture delivered practical health benefits, data from an 8-week field intervention ($n = 38$, preliminary physiological data reported in Koweerawong et al., 2024) were analyzed. As summarized in Table 1, participants experienced statistically significant improvements across key physiological markers.
 
 [Format Guide: Table Caption | Font: Times New Roman 9 pt Bold | Position: Placed Above Table]
 **Table 1** Comparison of physiological metrics pre- and post-intervention ($n = 38$)
@@ -247,7 +249,7 @@ The authors express their gratitude to the Happy Health Happy Heart Project, the
 ## References
 
 [Format Guide: Reference Entries | Font: Times New Roman 8-9 pt Regular | Alignment: Flush Left | Style: APA 7th Edition | Indent: Hanging 0.5 in | Limit: Max 30 Entries | Note: No Standalone Website URLs]
-1. Kowsuwan, C., Chaisiri, P., & Siriroj, N. (2024). Effectiveness of a health promotion program applying generative AI technology on body composition and health behaviors among university staff. *Health Education Journal*, 47(1), 85–98.
+1. Koweerawong, C., Ampornphan, P., Sriwongklang, W., Boonsit, S., & Chatree, Y. (2024). Effectiveness of a health promotion program applying generative AI technology on body composition and health behaviors among university staff. *Health Education Journal*, 47(1), 85–98.
 2. Department of Health, Ministry of Public Health. (2022). *Guidelines for health behavior modification services in NCDs clinics*. Agricultural Co-operative Federation of Thailand Printing House.
 3. Mifflin, M. D., St Jeor, S. T., Hill, L. A., Scott, B. J., Daugherty, S. A., & Koh, Y. O. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *The American Journal of Clinical Nutrition*, 51(2), 241–247. https://doi.org/10.1093/ajcn/51.2.241
 4. Open Source Academic Network. (2024). Generative AI applications in personal health monitoring: A systematic review. *Journal of Medical Internet Research*, 26(3), e45120. https://doi.org/10.2196/45120

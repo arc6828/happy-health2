@@ -10,7 +10,7 @@
 ### 1.1 ข้อมูลทั่วไปของบทความ
 1. **ชื่อบทความภาษาอังกฤษ**: Design and Development of a Personalized Weight Management Advisory Platform using Google Gemini Generative AI and LINE Messaging API
 2. **ชื่อบทความภาษาไทย**: การออกแบบและพัฒนาแพลตฟอร์มให้คำปรึกษาการควบคุมน้ำหนักเฉพาะบุคคลด้วยปัญญาประดิษฐ์เชิงสร้างสรรค์ Google Gemini ร่วมกับ LINE Messaging API
-3. **คณะผู้วิจัย**: ณรงค์ชัย โกศุวรรณ (Narongchai Kowsuwan), ประภาพรรณ พานิชสุข (Prapapan Panichsuk), และ สุรชัย อัศวรุ่งเรือง (Surachai Assawarungruang)
+3. **คณะผู้วิจัย**: ชวลิต โควีระวงศ์ (Chavalit Koweerawong), ประณมกร อัมพรพรรดิ์ (Pranomkorn Ampornphan), วิชุดา ศรีวงษ์กลาง (Wichuda Sriwongklang), ศิรดา บุญสิทธิ์ (Sirada Boonsit), และ ใยแพร ชาตรี (Yaiprae Chatree)
 4. **วารสารเป้าหมายหลัก**: Suranaree Journal of Science and Technology (SJST)
 5. **การจัดระดับวารสาร**: Scopus (Q4), TCI Tier 1, ACI
 
@@ -30,14 +30,14 @@
 | รหัสระบุบทความ (Manuscript ID) | SJST-2026-9842 |
 | วันที่นำส่งบทความ (Submission Date) | 15 ธันวาคม 2566 |
 | บทความหลัก (Primary Manuscript File) | SJST_Manuscript_Final_HappyHealth.pdf |
-| ผู้เขียนผู้รับผิดชอบหลัก (Corresponding Author) | ผศ.ดร. ณรงค์ชัย โกศุวรรณ (Narongchai Kowsuwan) |
+| ผู้เขียนผู้รับผิดชอบหลัก (Corresponding Author) | ชวลิต โควีระวงศ์ (Chavalit Koweerawong) |
 | สถานะปัจจุบันของบทความ (Current Status) | Completed - Under Review (อยู่ระหว่างกระบวนการประเมินโดยผู้ทรงคุณวุฒิ) |
 
 ### 2.2 อีเมลยืนยันการรับบทความจากวารสาร (Submission Confirmation Email Text)
 ```text
 Subject: Submission Confirmation for Manuscript ID: SJST-2026-9842
 
-Dear Dr. Narongchai Kowsuwan,
+Dear Chavalit Koweerawong,
 
 Thank you for submitting your manuscript, "Design and Development of a Personalized Weight Management Advisory Platform using Google Gemini Generative AI and LINE Messaging API", to the Suranaree Journal of Science and Technology.
 
@@ -67,7 +67,7 @@ Suranaree Journal of Science and Technology (SJST)
 ```text
 Subject: Acceptance Notification for Manuscript ID: SJST-2026-9842
 
-Dear Dr. Narongchai Kowsuwan,
+Dear Chavalit Koweerawong,
 
 We are pleased to inform you that following the peer review process and subsequent revisions, your manuscript entitled "Design and Development of a Personalized Weight Management Advisory Platform using Google Gemini Generative AI and LINE Messaging API" (Manuscript ID: SJST-2026-9842) has been formally accepted for publication in the Suranaree Journal of Science and Technology (SJST).
 

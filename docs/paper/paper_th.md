@@ -5,14 +5,16 @@
 **Design and Development of a Personalized Weight Management Advisory Platform using Google Gemini Generative AI and LINE Messaging API**
 
 [คำแนะนำการจัดรูปแบบ: ชื่อผู้เขียน | ขนาดฟอนต์ 14 pt ตัวหนา | จัดกึ่งกลาง]
-**คณะผู้จัดทำ**: ชวลิต โควสุวรรณ<sup>1,*</sup>, พรรณทิพย์ ชัยศิริ<sup>1</sup>, และ ณัฏฐ์ชุดา ศิริโรจน์<sup>1</sup>  
+**คณะผู้จัดทำ**: ชวลิต โควีระวงศ์<sup>1,*</sup>, ประณมกร อัมพรพรรดิ์<sup>1</sup>, วิชุดา ศรีวงษ์กลาง<sup>2</sup>, ศิรดา บุญสิทธิ์<sup>2</sup>, และ ใยแพร ชาตรี<sup>3</sup>  
 
 [คำแนะนำการจัดรูปแบบ: สถาบันสังกัด | ขนาดฟอนต์ 9 pt ตัวเอียง | จัดกึ่งกลาง / Footnote]
-<sup>1</sup> ภาควิชาพลศึกษา คณะศึกษาศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ กรุงเทพมหานคร ประเทศไทย  
+<sup>1</sup> สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์ ปทุมธานี ประเทศไทย  
+<sup>2</sup> คณะสาธารณสุขศาสตร์ มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์ ปทุมธานี ประเทศไทย  
+<sup>3</sup> สาขาวิชาโภชนาการและการกำหนดอาหาร คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์ ปทุมธานี ประเทศไทย  
 
 [คำแนะนำการจัดรูปแบบ: รายละเอียดผู้รับผิดชอบบทความ | ขนาดฟอนต์ 9 pt ตัวเอียง | จัดชิดซ้าย / Footnote]
-<sup>*</sup> **ผู้รับผิดชอบบทความ (Corresponding Author)**: อีเมล: `g_chavalit.k@ku.th`, ORCID iD: `https://orcid.org/0009-0000-0000-0000`  
-**รหัส ORCID iD ผู้เขียนร่วม**: พรรณทิพย์ ชัยศิริ (`https://orcid.org/0009-0000-0000-0001`), ณัฏฐ์ชุดา ศิริโรจน์ (`https://orcid.org/0009-0000-0000-0002`)  
+<sup>*</sup> **ผู้รับผิดชอบบทความ (Corresponding Author)**: อีเมล: `chavalit.kow@gmail.com`, ORCID iD: `https://orcid.org/0009-0000-0000-0000`  
+**รหัส ORCID iD ผู้เขียนร่วม**: ประณมกร อัมพรพรรดิ์ (`https://orcid.org/0009-0000-0000-0001`), วิชุดา ศรีวงษ์กลาง (`https://orcid.org/0009-0000-0000-0002`), ศิรดา บุญสิทธิ์ (`https://orcid.org/0009-0000-0000-0003`), ใยแพร ชาตรี (`https://orcid.org/0009-0000-0000-0004`)  
 **เว็บไซต์อย่างเป็นทางการของโครงการ**: [https://happyhealthhappyheart.com](https://happyhealthhappyheart.com)  
 
 ---
@@ -27,7 +29,7 @@
 งานวิจัยนี้นำเสนอการออกแบบ พัฒนา และประเมินประสิทธิภาพเชิงสถาปัตยกรรมซอฟต์แวร์ของแพลตฟอร์มให้คำปรึกษาการควบคุมน้ำหนักเฉพาะบุคคลด้วยปัญญาประดิษฐ์เชิงสร้างสรรค์แบบมัลติโมดัล (Multimodal Generative AI Architecture) โดยประยุกต์ใช้โมเดลภาษาขนาดใหญ่ Google Gemini 2.0 Flash (`gemini-3.6-flash`) บูรณาการเข้ากับระบบบริการหลังบ้านประมวลผลเหตุการณ์แบบไม่ประสานเวลา (Hybrid Asynchronous Event-Driven Webhook Architecture) บนระบบปฏิบัติการ Laravel 12 และระบบอินเทอร์เฟซผู้ใช้ผ่าน LINE Messaging API โครงสร้างระบบโดดเด่นด้วยท่อประมวลผล 4 กลไกหลัก ได้แก่ 1) กลไกการสอดแทรกบริบทสรีรวิทยาเฉพาะบุคคลแบบไดนามิก (Dynamic Personalized Context Injection Protocol) สำหรับคำนวณอัตรา BMR และ TDEE เข้าสู่ Context Window 2) ระบบประมวลผลภาพถ่ายอาหารและประมาณค่าความหนาแน่นพลังงานด้วยมัลติโมดัล AI (Multimodal Computer Vision Caloric Density Estimation) 3) กลไกคัดกรองภัยคุกคามและการป้อนข้อมูลอันตราย (Automated Threat Mitigation Guardrails: `isUrl` Filter) และ 4) การควบคุมกรอบผลลัพธ์ประหยัดโทเคนสำหรับอุปกรณ์เคลื่อนที่ (Token-Efficient Single-Paragraph Output Framing)
 
 [คำแนะนำการจัดรูปแบบ: เนื้อหาบทคัดย่อภาษาไทย (ต่อ) | ขนาดฟอนต์ 10 pt ปกติ | จัดชิดซ้าย]
-ผลการประเมินประสิทธิภาพเชิงเทคนิคพบว่าระบบมีความเร็วในการตอบสนองคำถาม (Response Latency) เฉลี่ย 2.4 วินาที มีความเสถียรภาพร้อยละ 99.8 และป้องกันสแปมลิงก์ได้ถูกต้องร้อยละ 100 ผู้ใช้งานมีความพึงพอใจต่อระบบในระดับมากที่สุด ($\bar{x} = 4.59$, S.D. = 0.49) นอกจากนี้ เมื่อนำระบบไปทดสอบในโครงการส่งเสริมสุขภาพ 8 สัปดาห์ (เปิดเผยผลสัมฤทธิ์ทางสรีรวิทยาเบื้องต้นใน Kowsuwan et al., 2024) พบว่าสถาปัตยกรรม AI ดังกล่าวสามารถสนับสนุนให้กลุ่มตัวอย่างมีน้ำหนักตัวลดลงเฉลี่ย 1.69 กิโลกรัม ($p < .001$) และเปอร์เซ็นต์ไขมันลดลงร้อยละ 1.36 ($p < .001$) งานวิจัยนี้ยืนยันว่าการออกแบบสถาปัตยกรรม Generative AI ร่วมกับระบบรักษาความปลอดภัยและการฉีดบริบทเป็นรูปแบบการพัฒนาที่ทรงประสิทธิภาพสำหรับนวัตกรรมสุขภาพดิจิทัล
+ผลการประเมินประสิทธิภาพเชิงเทคนิคพบว่าระบบมีความเร็วในการตอบสนองคำถาม (Response Latency) เฉลี่ย 2.4 วินาที มีความเสถียรภาพร้อยละ 99.8 และป้องกันสแปมลิงก์ได้ถูกต้องร้อยละ 100 ผู้ใช้งานมีความพึงพอใจต่อระบบในระดับมากที่สุด ($\bar{x} = 4.59$, S.D. = 0.49) นอกจากนี้ เมื่อนำระบบไปทดสอบในโครงการส่งเสริมสุขภาพ 8 สัปดาห์ (เปิดเผยผลสัมฤทธิ์ทางสรีรวิทยาเบื้องต้นใน Koweerawong et al., 2024) พบว่าสถาปัตยกรรม AI ดังกล่าวสามารถสนับสนุนให้กลุ่มตัวอย่างมีน้ำหนักตัวลดลงเฉลี่ย 1.69 กิโลกรัม ($p < .001$) และเปอร์เซ็นต์ไขมันลดลงร้อยละ 1.36 ($p < .001$) งานวิจัยนี้ยืนยันว่าการออกแบบสถาปัตยกรรม Generative AI ร่วมกับระบบรักษาความปลอดภัยและการฉีดบริบทเป็นรูปแบบการพัฒนาที่ทรงประสิทธิภาพสำหรับนวัตกรรมสุขภาพดิจิทัล
 
 [คำแนะนำการจัดรูปแบบ: คำสำคัญภาษาไทย | หัวข้อ 10 pt ตัวหนา | เนื้อหา 10 pt ปกติ | 4-6 คำ คั่นด้วยเครื่องหมายจุลภาค]
 **คำสำคัญ**: สถาปัตยกรรมปัญญาประดิษฐ์เชิงสร้างสรรค์, Google Gemini, การฉีดบริบทส่วนบุคคล, สภาพแวดล้อมสุขภาพดิจิทัล, LINE Messaging API
@@ -38,7 +40,7 @@
 ### Abstract in English
 
 [คำแนะนำการจัดรูปแบบ: เนื้อหาบทคัดย่อภาษาอังกฤษ | ขนาดฟอนต์ 10 pt ปกติ | จัดชิดซ้าย | ย่อหน้าเดียว | ความยาวไม่เกิน 250 คำ]
-This paper presents the system architecture design, implementation, and performance evaluation of a personalized digital health advisory platform powered by a Multimodal Generative AI framework. The system integrates Google Gemini 2.0 Flash (`gemini-3.6-flash`) with a Hybrid Asynchronous Event-Driven Webhook Architecture built on Laravel 12 and the LINE Messaging API messaging infrastructure. The core technical novelty resides in a four-fold processing pipeline: 1) a Dynamic Personalized Context Injection Protocol that computes user-specific BMR and TDEE metrics to dynamically enrich the LLM context window; 2) a Multimodal Computer Vision Caloric Density Estimation engine for automated nutritional assessment from dish images; 3) automated security guardrails featuring input sanitization and threat mitigation (`isUrl` filtering); and 4) token-efficient single-paragraph output framing tailored for mobile viewports. Technical evaluation demonstrated a low average response latency of 2.4 seconds, 99.8% uptime reliability, and 100% security filter accuracy, with user satisfaction achieving the highest rating ($\bar{x} = 4.59$, S.D. = 0.49). Furthermore, real-world deployment in an 8-week health promotion program (whose preliminary physiological outcomes were established in Kowsuwan et al., 2024) validated that the platform supported significant mean weight reduction (-1.69 kg, $p < .001$) and body fat decrease (-1.36%, $p < .001$). These findings demonstrate that coupling Generative AI architectures with personalized context injection and robust security guardrails offers a highly scalable model for next-generation digital health systems.
+This paper presents the system architecture design, implementation, and performance evaluation of a personalized digital health advisory platform powered by a Multimodal Generative AI framework. The system integrates Google Gemini 2.0 Flash (`gemini-3.6-flash`) with a Hybrid Asynchronous Event-Driven Webhook Architecture built on Laravel 12 and the LINE Messaging API messaging infrastructure. The core technical novelty resides in a four-fold processing pipeline: 1) a Dynamic Personalized Context Injection Protocol that computes user-specific BMR and TDEE metrics to dynamically enrich the LLM context window; 2) a Multimodal Computer Vision Caloric Density Estimation engine for automated nutritional assessment from dish images; 3) automated security guardrails featuring input sanitization and threat mitigation (`isUrl` filtering); and 4) token-efficient single-paragraph output framing tailored for mobile viewports. Technical evaluation demonstrated a low average response latency of 2.4 seconds, 99.8% uptime reliability, and 100% security filter accuracy, with user satisfaction achieving the highest rating ($\bar{x} = 4.59$, S.D. = 0.49). Furthermore, real-world deployment in an 8-week health promotion program (whose preliminary physiological outcomes were established in Koweerawong et al., 2024) validated that the platform supported significant mean weight reduction (-1.69 kg, $p < .001$) and body fat decrease (-1.36%, $p < .001$). These findings demonstrate that coupling Generative AI architectures with personalized context injection and robust security guardrails offers a highly scalable model for next-generation digital health systems.
 
 [คำแนะนำการจัดรูปแบบ: Keywords ภาษาอังกฤษ | หัวข้อ 10 pt ตัวหนา | เนื้อหา 10 pt ปกติ | 4-6 คำ คั่นด้วย Comma]
 **Keywords**: Generative AI architecture, Google Gemini 2.0 Flash, Personalized context injection, Digital health environment, LINE Messaging API
@@ -96,7 +98,7 @@ Google Gemini 2.0 Flash (`gemini-3.6-flash`) เป็นโมเดล MLLM �
 ### 2.3 งานวิจัยก่อนหน้าและขอบเขตความแปลกใหม่เชิงสถาปัตยกรรม (Prior Work & Novelty)
 
 [คำแนะนำการจัดรูปแบบ: เนื้อหา | ขนาดฟอนต์ 10 pt ปกติ | ย่อหน้า 1 tab (0.5 นิ้ว)]
-งานวิจัยก่อนหน้าโดย Kowsuwan et al. (2024) ได้รายงานผลการประเมินประสิทธิผลของโปรแกรมส่งเสริมสุขภาพในมิติทางสุขศึกษาและพฤติกรรมสุขภาพ งานวิจัยฉบับนี้มุ่งเน้นการนำเสนอนวัตกรรมเชิงสถาปัตยกรรมซอฟต์แวร์ (Software Architectural Innovation) ซึ่งครอบคลุมถึงการออกแบบท่อประมวลผล Dynamic Context Injection, กลไกความปลอดภัย Threat Mitigation Guardrails และการวิเคราะห์ระยะเวลาตอบสนอง Response Latency เชิงระบบ ซึ่งเป็นมิติทางเทคโนโลยีสารสนเทศที่ไม่เคยถูกเปิดเผยในรายงานวิจัยฉบับก่อน
+งานวิจัยก่อนหน้าโดย Koweerawong et al. (2024) ได้รายงานผลการประเมินประสิทธิผลของโปรแกรมส่งเสริมสุขภาพในมิติทางสุขศึกษาและพฤติกรรมสุขภาพ งานวิจัยฉบับนี้มุ่งเน้นการนำเสนอนวัตกรรมเชิงสถาปัตยกรรมซอฟต์แวร์ (Software Architectural Innovation) ซึ่งครอบคลุมถึงการออกแบบท่อประมวลผล Dynamic Context Injection, กลไกความปลอดภัย Threat Mitigation Guardrails และการวิเคราะห์ระยะเวลาตอบสนอง Response Latency เชิงระบบ ซึ่งเป็นมิติทางเทคโนโลยีสารสนเทศที่ไม่เคยถูกเปิดเผยในรายงานวิจัยฉบับก่อน
 
 ---
 
@@ -197,7 +199,7 @@ private function isUrl($text): bool
 ### 4.3 กรณีศึกษาประเมินประสิทธิผลเชิงประยุกต์ (Case Study Clinical Efficacy Validation)
 
 [คำแนะนำการจัดรูปแบบ: เนื้อหา | ขนาดฟอนต์ 10 pt ปกติ | ย่อหน้า 1 tab (0.5 นิ้ว)]
-ผลการนำสถาปัตยกรรมระบบไปทดสอบใช้งานจริงในโครงการส่งเสริมสุขภาพระยะเวลา 8 สัปดาห์ ($n = 38$, อ้างอิงการประเมินสรีระเบื้องต้นใน Kowsuwan et al., 2024) แสดงการเปลี่ยนแปลงขององค์ประกอบร่างกายอย่างมีนัยสำคัญทางสถิติ ดังแสดงในตารางที่ 1
+ผลการนำสถาปัตยกรรมระบบไปทดสอบใช้งานจริงในโครงการส่งเสริมสุขภาพระยะเวลา 8 สัปดาห์ ($n = 38$, อ้างอิงการประเมินสรีระเบื้องต้นใน Koweerawong et al., 2024) แสดงการเปลี่ยนแปลงขององค์ประกอบร่างกายอย่างมีนัยสำคัญทางสถิติ ดังแสดงในตารางที่ 1
 
 [คำแนะนำการจัดรูปแบบ: คำอธิบายตาราง | ขนาดฟอนต์ 9 pt ตัวหนา | วางไว้เหนือตาราง]
 **ตารางที่ 1** การเปรียบเทียบตัวแปรองค์ประกอบร่างกายก่อนและหลังการใช้งานแพลตฟอร์ม ($n = 38$)

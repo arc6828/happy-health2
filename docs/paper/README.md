@@ -27,7 +27,7 @@
    * **Hybrid Asynchronous Event-Driven Webhook Framework**: ระบบประมวลผลเหตุการณ์แบบไม่ประสานเวลาบน Laravel 12 และ LINE Messaging API ลด Latency เหลือเพียง 2.4 วินาที
    * **Automated Threat Mitigation Guardrails**: ระบบความปลอดภัยและคัดกรองภัยคุกคามสแปมลิงก์ (`isUrl` Filter) สำเร็จร้อยละ 100
    * **Token-Efficient Output Framing**: การควบคุมรูปแบบคำตอบไม่เกินหนึ่งย่อหน้าสำหรับการแสดงผลบนอุปกรณ์เคลื่อนที่
-4) **การป้องกันปัญหาการตีพิมพ์ซ้ำ (Ethics & Citation Strategy)**: บทความฉบับนี้ปรับจุดเน้นหลัก (Novel Contribution) ไปที่ **สถาปัตยกรรมซอฟต์แวร์เชิงลึก (System Architecture), การวิศวรรกรรมพร้อมต์ (Prompt Engineering), ระบบความปลอดภัย (`isUrl` Filter) และความเร็วในการตอบสนอง (Response Latency)** โดยมีการอ้างอิงผลลัพธ์ทางสุขศึกษาจากบทความเดิมใน *วารสารสุขศึกษา* (Kowsuwan et al., 2024) อย่างถูกต้องเพื่อป้องกันปัญหา Self-Plagiarism
+4) **การป้องกันปัญหาการตีพิมพ์ซ้ำ (Ethics & Citation Strategy)**: บทความฉบับนี้ปรับจุดเน้นหลัก (Novel Contribution) ไปที่ **สถาปัตยกรรมซอฟต์แวร์เชิงลึก (System Architecture), การวิศวรรกรรมพร้อมต์ (Prompt Engineering), ระบบความปลอดภัย (`isUrl` Filter) และความเร็วในการตอบสนอง (Response Latency)** โดยมีการอ้างอิงผลลัพธ์ทางสุขศึกษาจากบทความเดิมใน *วารสารสุขศึกษา* (Koweerawong et al., 2024) อย่างถูกต้องเพื่อป้องกันปัญหา Self-Plagiarism
 
 ---
 
